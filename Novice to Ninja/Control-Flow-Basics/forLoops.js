@@ -3,7 +3,7 @@
 
 // let i = 0: initialization variable
 // i < 5: a condition, it'll evaluate to true eg execute or false eg dont excute
-// final expression: execute everytime at the end of the code block
+// i++ final expression: execute everytime at the end of the code block
 // {} code block: it's just a section of code that we're sectioning ogg and its for this loop
 for (let i = 0; i < 5; i++) {
   console.log("in loop:", i);
