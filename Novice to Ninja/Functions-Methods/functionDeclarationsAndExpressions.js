@@ -1,5 +1,4 @@
 // these two different ways of creating functions, behave the same way.
-// There's a subtle difference when it comes to something called hoisting in JavaScript eg
 
 greet();
 greet();
