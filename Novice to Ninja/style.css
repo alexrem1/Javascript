@@ -1,15 +1,8 @@
-.error {
-  padding: 10px;
-  color: crimson;
-  border: 1px dotted crimson;
-}
-
-.success {
-  padding: 10px;
-  color: limegreen;
-  border: 1px dotted limegreen;
-}
-
-.blue {
-  color: blue;
+li {
+  list-style-type: none;
+  max-width: 200px;
+  padding: 8px;
+  margin: 8px auto;
+  background: #eee;
+  border: 1px dotted #ddd;
 }
