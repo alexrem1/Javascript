@@ -21,9 +21,11 @@ items.forEach((item) => {
   item.addEventListener("click", (e) => {
     // console.log("item clicked");
     // console.log(e);
+
     // console.log(e.target);
     // OR
     // console.log(item.innerText);
+
     // e.target.style.textDecoration = "line-through";
     e.target.remove();
   });
