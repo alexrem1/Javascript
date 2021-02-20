@@ -1,11 +1,11 @@
 const form = document.querySelector(".signup-form");
-// const username = document.querySelector("#meridian");
+// const username = document.querySelector("#username");
 
 form.addEventListener("submit", (e) => {
   e.preventDefault();
   //   console.log(username.value);
-  console.log(form.DONKEY.value);
-  console.log(form.meridian.value);
+  console.log(form.user.value);
+  console.log(form.username.value);
 });
 
 // Testing RegEx
