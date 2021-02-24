@@ -1,23 +1,16 @@
 body {
-  background: #eee;
+  background-color: #333;
 }
 
-form {
-  max-width: 200px;
-  margin: 40px auto;
-  background: white;
-  padding: 10px;
+.clock {
+  font-size: 4em;
+  text-align: center;
+  margin: 200px auto;
+  color: yellow;
+  font-family: Arial, Helvetica, sans-serif;
 }
 
-input {
-  display: block;
-  margin: 10px auto;
-  padding: 4px;
-}
-
-.success {
-  border: 2px solid limegreen;
-}
-.error {
-  border: 2px solid crimson;
+.clock span {
+  padding: 20px;
+  background-color: #334;
 }
