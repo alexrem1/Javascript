@@ -1,0 +1,4 @@
+// JavaScript can run ONE statement at a time - single threaded eg making a network request to a database on another server can take 2-3 seconds, this fetching of data stalls the program and is known as blocking code. Multiple functions to get data means longer wait times
+
+// ASync (non-blocking) governs how we perform tasks which take some time to complete eg requesting external data - START SOMETHING NOW AND FINISH IT LATER - the browser takes that request and it handles it outside of the scope of the single thread. It also takes a callback function and puts it to one side so that it knows to execute this later when the data comes back
+// JS can run the remaining functions whilst the data is being requested. Once the requested data has been received, the callback function is then called and the original function is finished
