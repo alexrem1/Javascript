@@ -15,6 +15,7 @@ const getWeather = async (locationID) => {
 };
 
 // get city information
+// eg "Key" code to pass into "getWeather"
 const getCity = async (city) => {
   const baseURL =
     "http://dataservice.accuweather.com/locations/v1/cities/search";
@@ -25,13 +26,3 @@ const getCity = async (city) => {
 
   return data[0];
 };
-
-// const getCity is an async function which returns a promise allowing us to tack on a ".then"
-getCity("manchester")
-  .then((data) => {
-    return getWeather(data.Key);
-  })
-  .then((data) => console.log(data)) //fires callback function to get weather data eg temp weather etc
-  .catch((err) => console.log(err));
-
-getWeather("329260");
