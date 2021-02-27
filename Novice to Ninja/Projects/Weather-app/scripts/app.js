@@ -4,8 +4,11 @@ const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 
 const updateUI = (data) => {
-  const cityDetails = data.cityDetails;
-  const weather = data.weather;
+  // const cityDetails = data.cityDetails;
+  // const weather = data.weather;
+
+  // descructure properties
+  const { cityDetails, weather } = data; // from this data object I want these two properties and store them in a same name variable
 
   // update details template
   details.innerHTML = `
@@ -27,7 +30,10 @@ const updateCity = async (city) => {
 
   return {
     cityDetails,
-    weather, // when the property name is the same as the value name forget about property value pair eg object shorthand notation, neater
+    weather,
+    // cityDetails = cityDetails,
+    // Weather = weather,
+    // when the property name is the same as the value name forget about property value pair eg object shorthand notation, neater
   };
 };
 
