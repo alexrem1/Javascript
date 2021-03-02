@@ -4,6 +4,7 @@ const card = document.querySelector(".card");
 const details = document.querySelector(".details");
 const time = document.querySelector("img.time");
 const icon = document.querySelector(".icon img");
+const forecast = new Forecast();
 
 const updateUI = (data) => {
   // const cityDetails = data.cityDetails;
@@ -61,7 +62,8 @@ cityForm.addEventListener("submit", (e) => {
   cityForm.reset();
 
   // update the UI with new city
-  updateCity(city)
+  forecast
+    .updateCity(city)
     .then((data) => updateUI(data))
     .catch((err) => console.log(err));
 
@@ -70,7 +72,8 @@ cityForm.addEventListener("submit", (e) => {
 });
 
 if (localStorage.getItem("cityLocation")) {
-  updateCity(localStorage.getItem("cityLocation"))
+  forecast
+    .updateCity(localStorage.getItem("cityLocation"))
     .then((data) => updateUI(data))
     .catch((err) => console.log(err));
 }
