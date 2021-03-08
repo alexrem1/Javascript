@@ -44,6 +44,7 @@ class Chatroom {
 
   updateName(username) {
     this.username = username;
+    localStorage.setItem("username", username);
   }
 
   // updating the room property and unsubscribing from chages to the old room
