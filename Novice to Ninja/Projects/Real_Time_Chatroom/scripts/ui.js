@@ -6,6 +6,11 @@ class ChatUI {
     this.list = list;
   }
 
+  // clear html in the UL
+  clear() {
+    this.list.innerHTML = "";
+  }
+
   // html snippet/template
   render(data) {
     const when = dateFns.distanceInWordsToNow(data.created_at.toDate(), {
