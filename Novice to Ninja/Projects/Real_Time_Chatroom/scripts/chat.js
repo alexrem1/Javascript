@@ -56,21 +56,6 @@ class Chatroom {
   }
 }
 
-const chatroom = new Chatroom("general", "shaun");
-chatroom.getChats((data) => {
-  console.log(data);
-  // call the update function on the ui class
-});
-
-setTimeout(() => {
-  chatroom.updateRoom("gaming");
-  chatroom.updateName("mario");
-  chatroom.getChats((data) => {
-    console.log(data);
-  });
-  chatroom.addChat("hello, its me mario");
-}, 3000);
-
 // step 1: create a class
 // step 2: create a new "Chatroom"
 // step 3: create an async method to add new chat documents
@@ -79,3 +64,4 @@ setTimeout(() => {
 // step 6: update the username
 // step 7: update the chatroom when a button is pressed
 // step 8: unsubscribe from initial room instance changes
+// step 9: take data from chatroom class and pass it to chatUI
