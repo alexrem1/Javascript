@@ -27,18 +27,22 @@ class Chatroom {
   // real time listener - everytime there's a snapshot, it'll fire the first callback function to check if its a added type which will invoke the callback function passing in that data which gets fired on line 41
   // calling line 41 once sets up this real time listener eg data added like new chats can be retreived and modified inside the callback function below
   getChats(callback) {
-    this.chats.onSnapshot((snapshot) => {
-      snapshot.docChanges().forEach((change) => {
-        if (change.type === "added") {
-          // update the ui
-          callback(change.doc.data());
-        }
+    this.chats
+      // allows me to get documents from a certain collection when a certain condition is true eg only listen for changes to documents where the room is equal to whatever room we pass in when creating a "new Chatroom" instance
+      .where("room", "==", this.room)
+      .orderBy("created_at")
+      .onSnapshot((snapshot) => {
+        snapshot.docChanges().forEach((change) => {
+          if (change.type === "added") {
+            // update the ui
+            callback(change.doc.data());
+          }
+        });
       });
-    });
   }
 }
 
-const chatroom = new Chatroom("gaming", "shaun");
+const chatroom = new Chatroom("general", "shaun");
 chatroom.getChats((data) => {
   console.log(data);
   // call the update function on the ui class
@@ -47,3 +51,4 @@ chatroom.getChats((data) => {
 // step 2: create a new "Chatroom"
 // step 3: create an async method to add new chat documents
 // step 4: set up a real-time listener
+// step 5: only listen for document changes unique to that specific room
