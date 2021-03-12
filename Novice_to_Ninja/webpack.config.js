@@ -10,4 +10,8 @@ module.exports = {
     path: path.resolve(__dirname, "Modern_Feature_Support/distEndCode/assets"),
     filename: "bundle.js",
   },
+  devServer: {
+    contentBase: path.resolve(__dirname, "Modern_Feature_Support/distEndCode"),
+    publicPath: "/assets/",
+  },
 };
