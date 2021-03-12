@@ -26,6 +26,10 @@ module.exports = {
           },
         },
       },
+      {
+        test: /\.css$/,
+        use: ["style-loader", "css-loader"], // right to left, order is important
+      },
     ],
   },
 };
